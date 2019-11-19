@@ -12,19 +12,19 @@ public class StudentRepository {
 		Student student = new Student("First", 2, 3.6, "Male", Arrays.asList("Swimming", "BasketBall", "Soccor"));
 		students.add(student);
 		
-		student = new Student("Second", 2, 3.8, "Female", Arrays.asList("Swimming", "BasketBall", "Soccor"));
+		student = new Student("Second", 2, 3.8, "Female", Arrays.asList("Swimming", "Gymnastic", "Vollyball"));
 		students.add(student);
 		
-		student = new Student("Third", 3, 4.0, "Male", Arrays.asList("Swimming", "BasketBall", "Soccor"));
+		student = new Student("Third", 3, 4.0, "Male", Arrays.asList("Swimming", "Gymnastics", "Aerobics"));
 		students.add(student);
 		
-		student = new Student("Fourth", 3, 4.0, "Female", Arrays.asList("Swimming", "BasketBall", "Soccor"));
+		student = new Student("Fourth", 3, 4.0, "Female", Arrays.asList("Swimming", "Baseball", "Soccor"));
 		students.add(student);
 		
-		student = new Student("Fifth", 4, 3.5, "Male", Arrays.asList("Swimming", "BasketBall", "Soccor"));
+		student = new Student("Fifth", 4, 3.5, "Male", Arrays.asList("Swimming", "Dancing", "Football"));
 		students.add(student);
 		
-		student = new Student("Sixth", 4, 3.9, "Female", Arrays.asList("Swimming", "BasketBall", "Soccor"));
+		student = new Student("Sixth", 4, 3.9, "Female", Arrays.asList("Swimming", "BasketBall", "Baseball", "Soccor"));
 		students.add(student);
 		
 		return students;
