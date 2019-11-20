@@ -28,7 +28,7 @@ public class BiFunctionEx {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		System.out.println(nameAndActivityFilterExtractor.apply(StudentRepository.getStudents(), PredicateStudentEx.filterOnGrade));
+		System.out.println(nameAndActivityFilterExtractor.apply(StudentRepository.getStudents(), PredicateStudentEx.filterOnGrade.and(PredicateStudentEx.filterOnGpa)));
 	}
 
 }

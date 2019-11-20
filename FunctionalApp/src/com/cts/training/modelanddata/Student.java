@@ -21,8 +21,14 @@ public class Student {
 		this.activities = activities;
 	}
 	
+	public Student(String name) {
+		this.name = name;
+	}
 	
 	
+	public void printAllActivities() {
+		System.out.println("List of Activities : " + this.activities);
+	}
 	
 	
 	

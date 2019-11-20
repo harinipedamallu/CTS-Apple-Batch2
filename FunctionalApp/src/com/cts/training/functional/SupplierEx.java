@@ -10,12 +10,12 @@ import com.cts.training.modelanddata.StudentRepository;
 public class SupplierEx {
 	
 	// lambda supplier that can initiate/create a new student record and return
-	static Supplier<Student> studentProvider = () -> {
+	public static Supplier<Student> studentProvider = () -> {
 		return new Student("New Student", 2, 4.0, "Male", Arrays.asList("Swimming", "Basketball"));
 	};
 	
 	// lambda supplier that can get multiple student records
-	static Supplier<List<Student>> studentRepoProvider = () -> StudentRepository.getStudents();
+	public static Supplier<List<Student>> studentRepoProvider = () -> StudentRepository.getStudents();
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

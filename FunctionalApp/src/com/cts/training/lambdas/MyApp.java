@@ -12,16 +12,16 @@ class GreetingBase{
 	}*/
 
 	// Solution : inject an Greetings interface
-	/*public void conveyGreetings(String message, Greetings greeting) {
+	public void conveyGreetings(String message, Greetings greeting) {
 		// depend on implementation of Greetings interface being injected
 		greeting.sendGreeting(message);
-	}*/
+	}
 	
-	public void conveyGreetings(String message, TestInterface test) {
+	/*public void conveyGreetings(String message, TestInterface test) {
 		// depend on implementation of Greetings interface being injected
 		// greeting.sendGreeting(message);
 		test.fun(message);
-	}
+	}*/
 }
 
 
@@ -31,6 +31,14 @@ interface TestInterface{
 }
 
 public class MyApp {
+	
+	public void instanceMethod(String str) {
+		System.out.println("Instance method of class says : " + str);
+	}
+	
+	public static void staticMethod(String str) {
+		System.out.println("Static method of class says : " + str);
+	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -91,7 +99,17 @@ public class MyApp {
 		
 		// injecting pure functionality ( first class elements )
 		// no type boundation....
-		app.conveyGreetings("Hello All", message -> System.out.println("Messages conveyed over network : " + message)); 
+		//app.conveyGreetings("Hello All", message -> System.out.println("Messages conveyed over network : " + message));
+		
+		
+		Greetings instanceGreeting = new MyApp() :: instanceMethod;
+		Greetings staticGreeting = MyApp :: staticMethod;
+		// app.conveyGreetings("Hello", instanceGreeting);
+		// app.conveyGreetings("Hello", new MyApp() :: instanceMethod);
+		// app.conveyGreetings("Hello",  MyApp :: instanceMethod);
+		app.conveyGreetings("Hello", staticGreeting);
+		
+		
 		
 	}
 
