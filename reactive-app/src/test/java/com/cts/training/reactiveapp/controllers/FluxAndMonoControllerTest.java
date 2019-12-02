@@ -80,7 +80,7 @@ public class FluxAndMonoControllerTest {
 		
 	}*/
 	
-	@Test
+	/*@Test
 	public void testMono() {
 		
 		// expected data
@@ -98,6 +98,26 @@ public class FluxAndMonoControllerTest {
 			});
 		 
 		
-	}
+	}*/
+	
+	/*@Test
+	public void fluxInfinite() {
+		
+		Flux<Long> infiniteFlux =  webTestClient.get().uri("/flux-infinite")
+				.accept(MediaType.APPLICATION_STREAM_JSON)
+				.exchange() // sents the request
+				.expectStatus().isOk() // alt to HttpStatus Constants
+				.returnResult(Long.class) // type of data expected
+				.getResponseBody(); // get the content exposed by rest end-point
+		
+		
+		StepVerifier.create(infiniteFlux)
+				.expectNext(0L)
+				.expectNext(1L)
+				.expectNext(2L)
+				.thenCancel()
+				.verify();
+		
+	}*/
 
 }

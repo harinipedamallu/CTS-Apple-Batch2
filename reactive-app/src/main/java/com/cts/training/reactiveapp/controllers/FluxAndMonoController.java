@@ -19,6 +19,18 @@ public class FluxAndMonoController {
 				.log();
 	}
 	
+	
+	@GetMapping(value = "/flux-infinite" , produces= MediaType.APPLICATION_STREAM_JSON_VALUE) // each value a seperate json
+	public Flux<Long> returnInfiniteFlux(){
+		return Flux.interval(Duration.ofSeconds(1))
+				// .delayElements(Duration.ofSeconds(1))	
+				.log();
+	}
+	
+	
+	
+	
+	
 	@GetMapping(value = "/mono") 
 	public Mono<Integer> returnMono(){
 		return Mono.just(5).log();
