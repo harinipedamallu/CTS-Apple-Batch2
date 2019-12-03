@@ -35,7 +35,7 @@ public class ItemReactiveRepositoryTest {
 			
 	
 	
-	@Before
+	/*@Before
 	public void setUp() {
 		this.itemReactiveRepository.deleteAll()
 				.thenMany(Flux.fromIterable(items))
@@ -43,7 +43,7 @@ public class ItemReactiveRepositoryTest {
 				.doOnNext(item -> System.out.println("Inserted item : " + item))
 				.blockLast(); 
 
-	}
+	}*/
 	
 	
 	/*@Test
@@ -64,7 +64,7 @@ public class ItemReactiveRepositoryTest {
 		 			.verifyComplete();
 	}*/
 	
-	@Test
+	/*@Test
 	public void saveTest() {
 		
 		Item item = new Item(null, "Google Home Mini", 40.00);
@@ -75,7 +75,7 @@ public class ItemReactiveRepositoryTest {
 		 			.expectSubscription()
 		 			.expectNextMatches(itm -> itm.getDescription().equals("Google Home Mini"))
 		 			.verifyComplete();
-	}
+	}*/
 	
 	
 	
